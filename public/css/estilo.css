@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Special+Elite&display=swap');
 
 body {
   margin: 0;
@@ -11,7 +12,7 @@ body {
 :root {
   --tamanho-header: 80px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-quiz: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-footer: 65px;
 }
@@ -24,7 +25,10 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #0548C6;
+  border-bottom: 2px solid #4a0109;
+  position: fixed;
+  width: 100%;
+  background-color: black;
 }
 
 .header .container {
@@ -34,8 +38,9 @@ body {
 }
 
 .header a {
+  font-size: 20px;
   text-decoration: none;
-  color: #e3b062;
+  color: white;
 }
 
 .agora {
@@ -48,14 +53,14 @@ body {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
+  color: white;
 }
 
 .titulo {
-  font-family: ;
-  color: #0548C6;
-  width: fit-content;
-  font-weight: 500;
+  width: 75px;
+  height: 75px;
+  display: flex;
+
 }
 
 .header h1 {
@@ -67,7 +72,7 @@ body {
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('../assets/imgs/banner.jpg');
   background-size: cover;
 }
 
@@ -78,10 +83,10 @@ body {
 }
 
 .banner .container p {
-  width: 50%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  font-size: 36px;
+  font-size: 50px;
 }
 
 .banner .container span {
@@ -91,7 +96,7 @@ body {
 /* MISSÃO VISÃO VALORES */
 
 .social {
-  background-color: #e5e5e5;
+  background-color: black;
   display: flex;
 }
 
@@ -110,8 +115,15 @@ body {
   padding: 30px 0;
 }
 
-.social p {
+.social p{
   text-align: center;
+  color: white;
+  font-family: "Special Elite", system-ui;
+}
+
+.social h4{
+  color: white;
+  font-family: "Limelight", sans-serif;
 }
 
 .box {
@@ -123,7 +135,7 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #190208;
   height: 150px;
   color: #fff;
   display: flex;
@@ -143,7 +155,7 @@ body {
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('../assets/imgs/banner.jpg');
   background-size: cover;
 }
 
@@ -304,16 +316,16 @@ input {
   width: 50px;
 }
 
-/* SIMULADOR */
+/* QUIZ */
 
-.simulador {
+.quiz {
   color: white;
 }
 
-.simulador .container {
+.quiz .container {
   flex-direction: column;
   overflow: scroll; 
-  height: var(--tamanho-simulador);
+  height: var(--tamanho-quiz);
 }
 
 /* ALERTA */
