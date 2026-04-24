@@ -213,7 +213,7 @@ body {
   }
 }
 
-.bloco {
+.bloco img{
   border: 5px solid;
   border-color: #4a0109;
   border-radius: 10px;
@@ -224,6 +224,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.capa, .atras {
+  width: 200px;
+  height: 200px;
+}
+
+.bloco .atras{
+    
 }
 
 .bloco h4 {
