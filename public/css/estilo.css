@@ -184,7 +184,7 @@ body {
   background-image: url('../assets/imgs/galaxy.png');
   background-size: cover;
   width: 100%;
-  height: 1200px;
+  /* height: 900px; */
 }
 
 .social2 .container {
@@ -196,7 +196,7 @@ body {
   padding: 50px 0px;
   gap: 50px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 /*Rotação dos Albuns*/
 .blocos:hover{
@@ -218,8 +218,8 @@ body {
   border-color: #4a0109;
   border-radius: 10px;
   background-color: #190208;
-  height: 300px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
   padding: 10px;
   display: flex;
   flex-direction: column;
