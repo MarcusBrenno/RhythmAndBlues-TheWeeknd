@@ -1,0 +1,49 @@
+/* Container principal para definir a perspectiva 3D */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Cria o efeito de profundidade 3D */
+}
+
+/* Div que faz a rotação */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s; /* Velocidade do giro */
+  transform-style: preserve-3d;
+}
+
+/* Gira a div interna quando o mouse passa pelo container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilo comum para as duas faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Esconde a face oposta ao girar */
+  border-radius: 50px;
+}
+
+/* Estilo específico da frente */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 50%;
+}
+
+/* Estilo específico do verso (já começa girado em 180 graus) */
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -191,62 +191,96 @@ body {
   .
 }
 
+
+
+
+
+
+
+
+
+
+
+/* O "pai" que segura os 9 cards */
 .blocos {
   display: flex;
-  padding: 50px 0px;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-/*Rotação dos Albuns*/
-.blocos:hover{
-  
+  flex-wrap: wrap;       /* Permite que os cards pulem para a linha de baixo */
+  width: 900px;          /* Opcional: define uma largura fixa para o bloco todo */
+  margin: 0 auto;        /* Centraliza a grid na página */
+
 }
 
-@keyframes album {
-  0% {
-    transform: rotateY(0deg);
-  }
-
-  50% {
-    transform: rotateY(180deg);
-  }
-}
-
-.bloco img{
-  border: 5px solid;
-  border-color: #4a0109;
-  border-radius: 10px;
-  background-color: #190208;
-  height: 200px;
+/* O card individual */
+.bloco {
+  flex: 0 0 33.33%;      /* Não cresce, não encolhe, ocupa exatamente 1/3 */
+  /* height: 300px;         Altura do card */
+  perspective: 1000px;
+  box-sizing: border-box; 
+  /* padding: 20px;         Cria o espaço (espaçamento) entre os cards */
+  position: relative;
   width: 200px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 200px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+
+}
+
+/* --- O efeito de giro (igual ao anterior) --- */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.bloco:hover {
+  transform: rotateY(180deg);
 }
 
 .capa, .atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.capa img {
   width: 200px;
   height: 200px;
+  object-fit: cover; /* Garante que a imagem preencha o card sem deformar */
+  border-radius: 8px;
 }
 
-.bloco .atras{
-    
-}
-
-.bloco h4 {
+.atras {
+  background-color: #2980b9;
   color: white;
-  font-size: 30px;
-  margin: 0px;
-  margin-bottom: 10px;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
 }
 
-.bloco p {
-  color: white;
-  font-size: 15px;
-  margin: 0px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
