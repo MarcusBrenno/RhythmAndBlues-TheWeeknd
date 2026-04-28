@@ -142,15 +142,18 @@ body {
 }
 
 .social p {
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d8d8d8;
+  /* Um cinza muito claro para não cansar a vista como o branco puro */
   text-align: justify;
-  color: white;
   font-family: "Special Elite", system-ui;
+
 }
 
 .social h4 {
   font-size: 40px;
-  color: white;
+  color: #d8d8d8;
   font-family: "Limelight", sans-serif;
   margin: 0;
 
@@ -162,6 +165,7 @@ body {
   align-items: center;
   max-width: 900px;
   gap: 20px;
+  cursor: pointer;
 }
 
 .box2 {
@@ -184,14 +188,10 @@ body {
   background-image: url('../assets/imgs/galaxy.png');
   background-size: cover;
   width: 100%;
-  /* height: 900px; */
+
+  /* Adicione esta linha para criar o distanciamento em cima e embaixo */
+  padding: 80px 0;
 }
-
-.social2 .container {
-  .
-}
-
-
 
 
 
@@ -204,67 +204,76 @@ body {
 /* O "pai" que segura os 9 cards */
 .blocos {
   display: flex;
-  flex-wrap: wrap;       /* Permite que os cards pulem para a linha de baixo */
-  width: 900px;          /* Opcional: define uma largura fixa para o bloco todo */
-  margin: 0 auto;        /* Centraliza a grid na página */
-
+  flex-wrap: wrap;
+  /* Permite que os cards pulem para a linha de baixo */
+  width: 900px;
+  /* Largura fixa para o bloco todo */
+  margin: 0 auto;
+  /* Centraliza a grid na página */
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
-/* O card individual */
 .bloco {
-  flex: 0 0 33.33%;      /* Não cresce, não encolhe, ocupa exatamente 1/3 */
-  /* height: 300px;         Altura do card */
-  perspective: 1000px;
-  box-sizing: border-box; 
-  /* padding: 20px;         Cria o espaço (espaçamento) entre os cards */
-  position: relative;
   width: 200px;
   height: 200px;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  margin-bottom: 25px;
-  margin-top: 25px;
-
-
-}
-
-/* --- O efeito de giro (igual ao anterior) --- */
-.flip-card-inner {
+  perspective: 1000px;
   position: relative;
-  width: 100%;
-  height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  padding: 25px;
+  cursor: pointer;
 }
 
 .bloco:hover {
   transform: rotateY(180deg);
 }
 
-.capa, .atras {
+.capa,
+.atras {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  /* Usa 100% do .bloco (200px) */
   height: 100%;
+  /* Usa 100% do .bloco (200px) */
   backface-visibility: hidden;
   border-radius: 8px;
 }
 
 .capa img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover; /* Garante que a imagem preencha o card sem deformar */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Garante que a imagem preencha o card sem deformar */
   border-radius: 8px;
 }
 
 .atras {
-  background-color: #2980b9;
-  color: white;
+  background-color: #4a0109;
+  border: outset 5px;
+  border-color: #190208;
+  color: #d8d8d8;
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
   text-align: center;
+  box-sizing: border-box;
+  /* Impede que o padding aumente o tamanho final do card (importante!) */
+  flex-direction: column;
+}
+
+.atras h4 {
+  font-family: "Limelight", sans-serif;
+
+}
+
+.atras p {
+  font-family: "Special Elite", system-ui;
 }
 
 
@@ -313,16 +322,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin-top: 35px;
 }
 
 .card {
   width: 50%;
-  background-color: #e5e5e5;
+  background-color: #4a0109;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: palevioletred;
+  color: white;
   flex-direction: column;
   height: fit-content;
   padding: 20px 0;
@@ -347,7 +357,7 @@ body {
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
+  border: 3px solid #190208;
   text-align: center;
   border-radius: 10px;
   margin: 0;
@@ -378,7 +388,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #ED145B;
+  background-color: #190208;
   width: 120px;
   height: 30px;
   align-self: center;
