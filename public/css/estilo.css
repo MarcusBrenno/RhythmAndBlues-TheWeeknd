@@ -313,7 +313,7 @@ body {
 
 /* LOGIN */
 .login {
-  height: var(--tamanho-login);
+  height: 700px;
   background-image: url('../assets/imgs/banner.jpg');
   background-size: cover;
 }
@@ -418,19 +418,21 @@ body {
 
 .card_erro {
   display: none;
-  background-color: #fff;
+  background-color: white;
   color: black;
-  width: 230px;
+  width: 250px;
   position: fixed;
-  border-radius: 4px;
-  border: #ED145B 3px solid;
+  border-radius: 10px;
+  border: darkred 3px solid;
   padding: 10px;
-  margin-right: 10%;
+  margin-right: 50px;
+  margin-top: 100px;
 }
 
 .card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
+  font-family: "Special Elite", system-ui;
 }
 
 .formulario .tipo_campo {
@@ -466,14 +468,14 @@ input {
 }
 
 .loading-div {
-  width: 50px;
+  width: 100px;
   margin: auto;
   display: none;
 }
 
 .loading-div img {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
 }
 
 /* QUIZ */

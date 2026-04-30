@@ -63,7 +63,7 @@
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img src="./assets/alien.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login"></div>
@@ -95,7 +95,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Complete todos os campos para continuar.";
             finalizarAguardar();
             return false;
         }
