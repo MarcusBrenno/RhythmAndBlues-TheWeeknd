@@ -4,7 +4,7 @@
 
 1.  **Clone este repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/the-revolution-of-the-weeknd.git](https://github.com/seu-usuario/the-revolution-of-the-weeknd.git)
+    git clone https://github.com/MarcusBrenno/RhythmAndBlues-TheWeeknd.git
     ```
 
 2.  **Configure o Banco de Dados:**
